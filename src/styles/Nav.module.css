@@ -1,0 +1,23 @@
+Nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 0rem 0.5rem;
+}
+.Logo{
+    display: flex;
+    align-items: center;
+}
+.Logo img{
+    width: 37px;
+    height: 37px;
+}
+.Logo p{
+    font-size: 20px;
+    font-weight: 900;
+}
+Nav button{
+    border: none;
+    background: none;
+}

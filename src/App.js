@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Formulario from "./components/Formulario/Formulario";
+import Navers from "./components/Home/Navers";
+import Login from "./components/Login/Login";
 
-function App() {
+export default function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="Login" element={<Login />} />
+        <Route path="/" element={<Navers />}/>
+        <Route
+          path="Adicionar"
+          element={<Formulario dados={"Adicionar"} />}
+        />
+        <Route
+          path="Editar/:id"
+          element={<Formulario dados={"Editar"}/>}
+        />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
-
-export default App;

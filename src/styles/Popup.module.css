@@ -1,0 +1,76 @@
+.Modal{
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(235, 234, 237, 0.9);
+    -webkit-transition: all 0.5s 0.5s ease-in-out;
+    
+}
+
+.Popup{
+    padding: 30px;
+    max-width: 72rem;
+    min-width: 36rem;
+    max-height: 85%;
+    overflow: auto;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 2;
+    border-radius: 4px;
+    background: #fff;
+    transform: translate(-50%, 0);
+    transition: all 0.5s ease-in-out;
+}
+.ExitButton{
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    background: none;
+    position: relative;
+    left: 31rem;
+}
+.BordeLeft{
+    border: 1px solid black;
+    transform: rotate(45deg);
+    position: relative;
+    top: 0.7px;
+}
+.BordeRight{
+    border: 1px solid black;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -0.08rem;
+}
+.Popup h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+
+    display: flex;
+    align-items: center;
+    
+    color: #212121;
+}
+.Popup  p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    color: #212121;
+
+    display: flex;
+    align-items: center;
+    
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+   
+}

@@ -1,0 +1,83 @@
+.Formulario{
+    position: relative;
+    width: 50rem;
+    height: 35rem;
+    padding-top: 5rem;
+    left: 25%;
+}
+.Formulario header{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.Formulario header img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+.Formulario header p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    color: #212121;
+}
+.Formulario main{
+    display: flex;
+    flex-flow: wrap;
+}
+.Formulario .LabelInput{
+    display: flex;
+    flex-direction: column;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+}
+.Formulario .LabelInput:last-child{
+    padding-bottom: 3rem;
+}
+.Formulario label{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+
+    color: #212121;
+}
+.Formulario input{
+    background: #FFFFFF;
+
+    height: 2rem;
+    width: 20rem;
+
+    padding: 0.25rem;
+    border: 1px solid #424242;
+    box-sizing: border-box;
+}
+.Formulario footer > button{
+    background: #212121;
+    
+    border:none;
+    
+    position: relative;
+    left: 66%;
+    
+    width: 12rem;
+    height: 2.5rem;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
