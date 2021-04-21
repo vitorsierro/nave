@@ -9,14 +9,14 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="Login" element={<Login />} />
+        <Route exact path="Login" element={<Login />} />
         <Route path="/" element={<Navers />}/>
         <Route
           path="Adicionar"
           element={<Formulario dados={"Adicionar"} />}
         />
         <Route
-          path="Editar/:id"
+          path="Editar"
           element={<Formulario dados={"Editar"}/>}
         />
       </Routes>

@@ -10,7 +10,7 @@
 
 o npm install irá inicializar o projeto instalando suas dependencias.
 
-##npm start ou yarn add
+##npm start ou yarn start
 
 o npm start irá iniciar o projeto em seu computador atraves da url localhost:3000
 ele iniciara automaticamente abrindo seu browser
@@ -28,9 +28,12 @@ https://img.shields.io/static/v1?label=Json-Server&message=Axios&color=blue&styl
 #Dificuldades enfrentas até o momento:
 
 - não conseguir adicionar nada de api rest.
+solução: adição do login pela api do nave.
 - não conseguir entender o json apesar de ter conseguido ver no postman as regras.
+solução: não tinha entendido que a nave tinha disponibilizado uma api propria e que o codigo no postman era apenas como deveria usar sua api.
 - não conseguir salvar os formulario nos dados locais.
 - não conseguir descobrir por que as imagens estão quebrando.
-- ficou faltando o pop-up com as informações individualizada.
+solução: retornei ao /editar tirando o /editar/id quando usado o id as imagens quebravam, não encontrei nada falando sobre.
+- Dificuldade no momento pegar e passar para dentro as informações estou tendo dificuldade de armazenar em forma local para trasmitir para algumas parte da pagina.
 
 Status do Projeto: Em desenvolvimento :warning:

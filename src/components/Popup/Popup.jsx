@@ -1,23 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router";
 import styled from "../../styles/Popup.module.css";
 
-export default function Popup({ onClose = () => { }, dados }) {
+export default function Popup({ onClosed = () => {  }, dados }) {
   dados = dados.toLowerCase();
-  const navigate = useNavigate();
-
-  function onCloser() {
-    if(dados ==="excluir"){console.log("Entrou"); return (onClose);}
-    else {return navigate('/');}
-  }
 
   return (
     <div className="modal" id="modal">
       <div className={styled.Popup}>
         <header>
-          <button className={styled.ExitButton} onClick={onCloser}>
-            <div className={styled.BordeLeft}></div>
-          <div className={styled.BordeRight}></div>
+          <button className={styled.ExitButton} onClick={onClosed}>
+            <div className={styled.BordeLeft}  />
+            <div className={styled.BordeRight} />
           </button>
         </header>
       <main>
@@ -27,6 +20,6 @@ export default function Popup({ onClose = () => { }, dados }) {
         <p>Nave {dados} com sucesso!</p>
       </footer>
     </div>
-    </div >
+    </div>
   );
 }

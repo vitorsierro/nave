@@ -1,0 +1,95 @@
+.Modal{
+    position: relative;
+    left: 21%;
+    top: 20%;
+    
+    display: flex;
+
+}
+.ModalFoto{
+    height: 28rem;
+    width: 26rem;
+    z-index: 1;
+}
+.ModalForm{
+    width: 24rem;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    left: -2%;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+.ModalH2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    
+    align-items: center;
+
+    color: #000000;
+
+}
+.ModalH4{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #212121;
+}
+
+.ModalMainP{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #212121;
+    
+    padding-top: 0.15rem;
+    padding-bottom: 0.6rem;
+}
+.ModalP{
+    padding-bottom: 2rem !important;
+}
+
+.ModalFooter{
+    position: relative;
+    top: 16%;
+
+}
+.BotaoDireito{
+    position: relative;
+    margin-right: 10px;
+}
+.Editar{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.ExitButton{
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    background: none;
+    position: relative;
+    top: 11px;
+    left: 21.5rem;
+    z-index: 1;
+}
+.BordeLeft{
+    border: 1px solid black;
+    transform: rotate(45deg);
+    position: relative;
+    top: 0.7px;
+}
+.BordeRight{
+    border: 1px solid black;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -0.08rem;
+}

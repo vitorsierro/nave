@@ -1,61 +1,30 @@
 import React, { createContext, useState } from 'react'
-import { criarNaver } from '../api/navers';
+import { pegarTudo } from '../api/navers';
+
 
 export const GlobalContext = createContext();
 
 export function  NaversContext ({children}){
 
-    const [form, setForm] = useState([
-      {
-        "id": 0,
-        "nome": "Vitor",
-        "cargo": "Programador",
-        "idade": "21",
-        "empresa": "Sem",
-        "projeto": "1",
-        "urlFoto": "fotos/Vitor"
-      },
-      {
-        "id": 1,
-        "nome": "Antonio",
-        "cargo": "Programador",
-        "idade": "21",
-        "empresa": "Sem",
-        "projeto": "1",
-        "urlFoto": "fotos/Vitor"
-      },
-      {
-        "id": 3,
-        "nome": "Vitor",
-        "cargo": "Programador",
-        "idade": "21",
-        "empresa": "Sem",
-        "projeto": "1",
-        "urlFoto": "fotos/Vitor"
-      },
-      {
-        "id": 4,
-        "nome": "Antonio",
-        "cargo": "Programador",
-        "idade": "21",
-        "empresa": "Sem",
-        "projeto": "1",
-        "urlFoto": "fotos/Vitor"
-      }
-    ]);
+    const [form, setForm] = useState([{}]);
+    
     const [token, setToken] = useState("");
-    function adicionarToken(token){
-      setToken(token)
-      console.log(token)
+    const [id, setId] = useState(0)
+    function adicionarToken(novotoken){
+      setToken(novotoken)
+      console.log("adicionar Token " + novotoken)
     }
 
     function adicionarForm(novoForm){
-      setForm(form +  novoForm);
+      setForm(novoForm);
+      console.log("adicionar formulario " + novoForm)
+    }
+    function adicionarId(novoid){
+      setId(novoid)
     }
     
-    
     return (
-        <GlobalContext.Provider value={{form, token, adicionarForm, adicionarToken}}>
+        <GlobalContext.Provider value={{form, token, id, adicionarForm, adicionarToken, adicionarId}}>
             {children }
         </GlobalContext.Provider>
     )    

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Popup from "../Popup/Popup";
 import styled from "../../styles/Formulario.module.css";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate } from "react-router";
 import Menu from "../Menu/Menu";
 import { GlobalContext } from "../../Contexts/NaversContext";
-import { criarNaver } from "../../api/navers";
 
 
 export default function Formulario({ dados }) {
@@ -18,10 +17,16 @@ export default function Formulario({ dados }) {
   const navigate = useNavigate();
   const global = React.useContext(GlobalContext);
   const tamanho = global.form.length
-  const [formulario, setFormulario] = useState([...global.form, {
-    "id": tamanho }])
-    var ID = useParams().id;
-    console.log(ID)
+  const [formulario, setFormulario] = useState([{
+    "id": 0,
+    "nome": "Vitor Sierro",
+    "cargo": "Front-End Develop",
+    "idade": "21",
+    "empresa": "10",
+    "projetos": "5",
+    "urlFotos": "fotos/Vitor.png"
+  }])
+  var ID = global.id;
   
   function handleSubmit(event){
     event.preventDefault();
@@ -35,12 +40,13 @@ export default function Formulario({ dados }) {
     "projetos":projetos,
     "urlFotos":urlFotos
     })
-    console.log(formulario)
   }
+  
   if(dados === "Adicionar"){
-    ID = tamanho;
+    global.adicionarId(tamanho) ;
+    console.log(ID)
   }
-
+  const Formulario = formulario[0]
   return (
     <>
       <Menu />
@@ -57,20 +63,20 @@ export default function Formulario({ dados }) {
           <div className={styled.LabelInput}>
             <label>Nome</label>
             <input type="name" placeholder="Nome" 
-            value={formulario[ID].nome}
+            value={Formulario.nome}
             onChange={(event) => { setNome(event.target.value) }} />
           </div>
           <div className={styled.LabelInput}>
             <label>Cargo</label>
             <input type="text" placeholder="Cargo"
-            value={formulario[ID].cargo}
+            value={Formulario.cargo}
              onChange={(event) => { setCargo(event.target.value) }} />
           </div>
 
           <div className={styled.LabelInput}>
             <label>Idade</label>
             <input type="age" placeholder="Idade"
-            value={formulario[ID].idade}
+            value={Formulario.idade}
              onChange={(event) => { setIdade(event.target.value) }} />
           </div>
           <div className={styled.LabelInput}>
@@ -78,7 +84,7 @@ export default function Formulario({ dados }) {
             <input
               type="text"
               placeholder="Tempo de empresa"
-              value={formulario[ID].empresa}
+              value={Formulario.empresa}
               onChange={(event) => { setEmpresa(event.target.value) }}
             />
           </div>
@@ -88,7 +94,7 @@ export default function Formulario({ dados }) {
             <input
               type="text"
               placeholder="Projetos que participou"
-              value={formulario[ID].projetos}
+              value={Formulario.projetos}
               onChange={(event) => { setProjetos(event.target.value) }}
             />
           </div>
@@ -97,7 +103,7 @@ export default function Formulario({ dados }) {
             <input
               type="text"
               placeholder="URL da foto do Naver"
-              value={formulario[ID].urlFotos}
+              value={Formulario.urlFotos}
               onChange={(event) => { setUrlFotos(event.target.value) }}
             />
           </div>

@@ -1,4 +1,4 @@
-#Login .Container{
+.LoginContainer{
     width: 33rem;
     height: 30rem;
     
@@ -8,36 +8,36 @@
     
     border: 1px solid black;
 }
-#Login header{
+.LoginHeader{
     display: flex;
     padding-left: 9rem;
     padding-top: 2rem;
     padding-bottom: 0.5rem;
 }
-#Login header img{
+.LoginHeaderIMG{
     width: 4rem;
     height: 4rem;
     text-align: left;
 }
-#Login header p{
+.LoginHeaderP{
     margin-left: 20px;
     font-size: 45px;
     font-weight: bold;
     color: #212121;
 }
-#Login main{
+.LoginMain{
     display: flex;
     flex-direction: column;
     margin: 2rem;
 }
-#Login label{
+.LoginLabel{
     margin-bottom: 0.4rem;
     margin-top: 1rem;
 }
-#Login input{
+.LoginInput{
     height: 2rem;
 }
-#Login button{
+.LoginButton{
     background-color: #212121;
     
     width: 29rem;
