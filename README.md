@@ -35,12 +35,12 @@ width="100%" height="100%" alt="bagde das libs utilizadas axios e json-server">
 <h1>Dificuldades enfrentas até o momento:</h1>
 
 - não conseguir adicionar nada de api rest.
-solução: adição do login pela api do nave.
+- solução: adição do login pela api do nave.
 - não conseguir entender o json apesar de ter conseguido ver no postman as regras.
-solução: não tinha entendido que a nave tinha disponibilizado uma api propria e que o codigo no postman era apenas como deveria usar sua api.
+- solução: não tinha entendido que a nave tinha disponibilizado uma api propria e que o codigo no postman era apenas como deveria usar sua api.
 - não conseguir salvar os formulario nos dados locais.
 - não conseguir descobrir por que as imagens estão quebrando.
-solução: retornei ao /editar tirando o /editar/id quando usado o id as imagens quebravam, não encontrei nada falando sobre.
+- solução: retornei ao /editar tirando o /editar/id quando usado o id as imagens quebravam, não encontrei nada falando sobre.
 - Dificuldade no momento pegar e passar para dentro as informações estou tendo dificuldade de armazenar em forma local para trasmitir para algumas parte da pagina.
 
 Status do Projeto: Em desenvolvimento :warning:
