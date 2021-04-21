@@ -1,31 +1,38 @@
-#Codigo para executar o servidor pelo json-server
+<h1>Codigo para executar o servidor pelo json-server<h1>
 
-##json-server --watch db.json --port 3001
+<h3>json-server --watch db.json --port 3001</h3>
 
 -- port é para executar na porta 3001
 
-#Codigo para executar o projeto em sua maquina. 
+<h1>Codigo para executar o projeto em sua maquina.</h1> 
 
-##npm install
+<h3>npm install</h3>
 
 o npm install irá inicializar o projeto instalando suas dependencias.
 
+<<<<<<< HEAD
 ##npm start ou yarn start
+=======
+<h3>npm start ou yarn add</h3>
+>>>>>>> 7d0a5929bc33ffac82f0ebd9278cd208a475c6a9
 
 o npm start irá iniciar o projeto em seu computador atraves da url localhost:3000
 ele iniciara automaticamente abrindo seu browser
 
 yarn start é para executar o projeto em sua maquina.
 
-#Libs e bibliotes utilizadas:
+<h1>Libs e bibliotes utilizadas:</h1>
 <br>
-https://img.shields.io/static/v1?label=React_Router_DOM&message=Styled_Components&color=green&style=for-the-badgefor-the-badge&logo=REACT
+<img src =
+https://img.shields.io/static/v1?label=React_Router_DOM&message=Styled_Components&color=green&style=for-the-badgefor-the-badge&logo=REACT 
+width="100%" height="100%" alt="bagde das libs utilizadas react router dom e styled components">
 <br>
+<img src =
 https://img.shields.io/static/v1?label=Json-Server&message=Axios&color=blue&style=for-the-badgefor-the-badge&logo=REACT
+width="100%" height="100%" alt="bagde das libs utilizadas axios e json-server">
 
 
-
-#Dificuldades enfrentas até o momento:
+<h1>Dificuldades enfrentas até o momento:</h1>
 
 - não conseguir adicionar nada de api rest.
 solução: adição do login pela api do nave.
