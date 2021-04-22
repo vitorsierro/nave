@@ -10,11 +10,10 @@
 
 o npm install irá inicializar o projeto instalando suas dependencias.
 
-<<<<<<< HEAD
+
 ##npm start ou yarn start
-=======
+
 <h3>npm start ou yarn add</h3>
->>>>>>> 7d0a5929bc33ffac82f0ebd9278cd208a475c6a9
 
 o npm start irá iniciar o projeto em seu computador atraves da url localhost:3000
 ele iniciara automaticamente abrindo seu browser
