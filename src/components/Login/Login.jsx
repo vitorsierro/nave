@@ -20,7 +20,7 @@ export default function Login() {
     useEffect(()=>{
         global.adicionarToken(token)
         if (token !== "" || token === undefined) {
-            navigate('/');
+            navigate('/Home');
         }
     }, [token])
 

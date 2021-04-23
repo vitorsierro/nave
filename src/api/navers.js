@@ -1,5 +1,4 @@
 import axios from "axios";
-
 function acesso(token) {
   
   const api = axios.create({
@@ -13,45 +12,48 @@ function acesso(token) {
 }
 
 export const pegarTudo = async (token, setForm) => {
-  acesso(token).get("/navers/").then((res) =>
-      (setForm(res.data.json)
-  )).catch((e)=>{alert("Error não foi possivel entrar nesse usuario")})
+ await acesso(token).get("/navers/")
+    .then((res) => (setForm(res.data)))
+    .catch((err) => {
+      alert("Error não foi pegar as informações!");
+      console.log(err)
+      })
 };
 
-export const pegarUmNaver = async (token, setDados, id) => {
-  acesso(token)
-    .get(`/navers/${id}`)
-    .then((res) => 
-      setDados(res.data.json),
-    ).then((res) => 
-      console.log(res.data.json)
-    );
-};
+export const pegarUmNaver = async (token, setForm, id) => {
+  console.log(id)
+  await acesso(token).get(`/navers/${id}`)
+   .then((res) => (setForm(res.data)))
+   .catch((err) => {
+    alert("Error não foi pegar a informação!");
+    console.log(err)
+    })};
 
-export const criarNaver = async (token, dados) => {
-  dados = JSON.stringify(dados)
-  acesso(token)
-    .post("/navers", dados)
-    .then((res) =>
-      res
-        .setState({ status: res.data.status })
-        .catch(alert("Error não foi possivel criar um usuario"))
-    );
-};
+export const criarNaver = async (token, formulario) => {
+  formulario = JSON.stringify(formulario)
+  console.log(formulario)
+  acesso(token).post("/navers", formulario)
+        .then(() => (console.log("dados enviado com sucesso")))
+        .catch((err) => {
+          alert("Error não foi possivel criar um usuario!");
+          console.log(err)
+          })};
 
-export const atualizarNaver = async (token, dados, id) => {
-  dados = JSON.stringify(dados)
-  acesso(token)
-    .post(`/navers/${id}`, dados)
-    .then((res) =>
-      res
-        .setState({ status: res.data.status })
-        .catch(alert("Error não foi possivel criar um usuario"))
-    );
-};
+export const atualizarNaver = async (token, formulario, id) => {
+  formulario = JSON.stringify(formulario)
+  console.log(id)
+  console.log(formulario)
+  acesso(token).put(`/navers/${id}`, formulario)
+    .then((res) => (console.log("dados atualizado com sucesso")))
+    .catch((err) => {
+        alert("Error não foi possivel criar um usuario!");
+        console.log(err)
+        })};
 
 export const deletarNaver = async (token, id) => {
-  acesso(token)
-    .delete(`/navers/${id}`)
-    .catch(alert("Error não foi deletar o usuario"));
-};
+  acesso(token).delete(`/navers/${id}`)
+  .then(() => (console.log("Dados delato com sucesso")))
+  .catch((err) => {
+    alert("Error não foi deletar o dado!");
+    console.log(err)
+    })};

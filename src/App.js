@@ -9,8 +9,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="Login" element={<Login />} />
-        <Route path="/" element={<Navers />}/>
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/Home" element={<Navers />}/>
         <Route
           path="Adicionar"
           element={<Formulario dados={"Adicionar"} />}
